@@ -1,0 +1,26 @@
+﻿<Window x:Class="TaskExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskExample" Background="LightGray"
+        mc:Ignorable="d" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button VerticalAlignment="Top" HorizontalAlignment="Center" Background="Wheat"
+                Content="Click here to insert new task in Queue" Width="230" Height="50"  Click="Button_Click"/>
+            <Grid HorizontalAlignment="Stretch" Width="760" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ScrollViewer  Grid.Column="0" Height="400">
+                    <TextBlock x:Name="txtProducer" Background="LightGreen"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                </ScrollViewer>
+                <ScrollViewer  Grid.Column="1" Height="400">
+                    <TextBlock x:Name="txtConsumer" Background="LightBlue"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                </ScrollViewer>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
