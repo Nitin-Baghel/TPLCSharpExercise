@@ -97,16 +97,16 @@ namespace TaskExample.ViewModels
 
         }
 
-        public static bool palindrome(string s)
+        public static bool palindrome(string RandomString)
         {
             string revs = "";
             bool result;
 
-            for (int i = s.Length - 1; i >= 0; i--) //String Reverse  
+            for (int i = RandomString.Length - 1; i >= 0; i--) //String Reverse  
             {
-                revs += s[i].ToString();
+                revs += RandomString[i].ToString();
             }
-            if (revs == s) // Checking whether string is palindrome or not  
+            if (revs == RandomString) // Checking whether string is palindrome or not  
             {
                 result = true;
 
