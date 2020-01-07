@@ -8,17 +8,17 @@
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Button VerticalAlignment="Top" HorizontalAlignment="Center" Background="Wheat"
-                Content="Click here to insert new task in Queue" Width="230" Height="50"  Click="Button_Click"/>
+                Content="Click here to insert new task in Queue" Width="230" Height="50"  Command="{Binding InsertTask}"/>
             <Grid HorizontalAlignment="Stretch" Width="760" VerticalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <ScrollViewer  Grid.Column="0" Height="400">
-                    <TextBlock x:Name="txtProducer" Background="LightGreen"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    <TextBlock x:Name="txtProducer"  Text= "{Binding InitialText, UpdateSourceTrigger=PropertyChanged}" Background="LightGreen"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
                 </ScrollViewer>
                 <ScrollViewer  Grid.Column="1" Height="400">
-                    <TextBlock x:Name="txtConsumer" Background="LightBlue"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    <TextBlock x:Name="txtConsumer"  Text= "{Binding FinalText, UpdateSourceTrigger=PropertyChanged}" Background="LightBlue"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
                 </ScrollViewer>
             </Grid>
         </StackPanel>
